@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  /* .title {
+      padding: 0.75rem 0.25rem 0.5rem;
+      font-weight: 600;
+      --tw-text-opacity: 1;
+      color: rgb(107 114 128 / var(--tw-text-opacity));
+  } */
+  .title {
+    @apply px-1 pb-2 pt-3 font-semibold text-gray-500;
+  }
+  .section {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;    
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;    
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+    
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+* {
+  box-sizing: border-box;
+}
