@@ -8,6 +8,8 @@ import HomePage from "./pages/homePage/homePage";
 import AddTask from "./pages/addTask/addTask";
 import CategoriePage from "./pages/categorie/categoriePage";
 import CategorieEditor from "./pages/categorieEditor/categorieEditor";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const isDarkMode = useSelector((state) => state.darkMode.value);
@@ -19,6 +21,7 @@ function App() {
   return (
     <div className={`${theme} dark:bg-gray-900  h-screen`}>
       <div className={`relative font-sans max-w-screen-sm md:max-w-sm mx-auto h-screen overflow-scroll no-scrollbar bg-gray-100 dark:bg-[#222831] transition-all ease-in-out`}>
+        <ToastContainer position="top-center" draggable pauseOnHover theme={theme} />
         <Routes>
           <Route element={<HomePage />} path="/" />
           <Route element={<AddTask />} path="add" />

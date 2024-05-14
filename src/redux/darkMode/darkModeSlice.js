@@ -15,7 +15,7 @@ const darkModeSlice = createSlice({
 })
 
 export function tasksThemes(isDarkMode) {
-    isDarkMode ? localStorage.setItem('theme', "dark") : localStorage.setItem('theme', "light")
+    isDarkMode ? localStorage.setItem('theme', JSON.stringify("dark")) :  localStorage.setItem('theme', JSON.stringify("light"))
     return isDarkMode ? "dark" : "light"
 }
 export const { toggleDarkMode, } = darkModeSlice.actions;

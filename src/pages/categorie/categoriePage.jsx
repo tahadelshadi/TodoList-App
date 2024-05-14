@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import Layout from "../../layout/layout";
-import Accordion from "../../components/accordion/accordion";
+import Accordion from "../../components/task/task";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { totalTaskCalculator } from "../../utils/calculator";
@@ -26,7 +26,6 @@ const CategoriePage = () => {
         t.categorie.toLowerCase() ===
         getQueryParamsCategorie.toLocaleLowerCase()
     );
-    console.log(filterTodos);
     if (filterTodos.length !== 0) {
       setTasks(filterTodos);
     } else {
