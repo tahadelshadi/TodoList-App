@@ -13,6 +13,7 @@ const Header = () => {
     <header className="bg-gray-100 dark:bg-[#31363F]">
       <div className="flex items-center justify-between p-4 ">
         <button
+        aria-label="navbar menu toggler"
           className="flex flex-col gap-y-1 p-2 text-2xl text-gray-500 dark:text-white"
           onClick={() => dispatch(toggleMenu())}>
           <span
@@ -22,14 +23,15 @@ const Header = () => {
         </button>
         <div className="flex items-center gap-2">
           <button
+          aria-label="dark mode toggle"
             className="py-2 text-xl text-gray-500 dark:text-white"
             onClick={() => dispatch(toggleDarkMode())}>
             {isDarkMode ? <FiMoon /> : <FiSun />}
           </button>
-          <button className="py-2 text-xl text-gray-500 dark:text-white">
+          <button className="py-2 text-xl text-gray-500 dark:text-white" aria-label="search">
             <FiSearch />
           </button>
-          <button className="py-2 text-xl text-gray-500 dark:text-white">
+          <button className="py-2 text-xl text-gray-500 dark:text-white" aria-label="notifications">
             <FiBell />
           </button>
         </div>

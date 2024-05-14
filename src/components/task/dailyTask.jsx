@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Accordion from "../accordion/accordion";
+import Task from "./task";
 
-const DailyTasks = ({ open, handleOpen, tasks }) => {
+const DailyTasks = ({ tasks }) => {
   const [dailyTasks, setDailyTasks] = useState([]);
   useEffect(() => {
     if (tasks) {
@@ -15,16 +15,12 @@ const DailyTasks = ({ open, handleOpen, tasks }) => {
   }, [tasks]);
   return (
     <>
-      <h1 className="title">
-        TODAY'S TASKS
-      </h1>
+      <h1 className="title">TODAY'S TASKS</h1>
       {dailyTasks.length === 0 ? (
-        <p className="m-4 text-center text-black dark:text-white">
-          You've Done It All &#128526;
-        </p>
+        <p className="m-4 text-center text-gray-700">No Task's yet</p>
       ) : (
         <>
-          <Accordion data={dailyTasks} />
+          <Task data={dailyTasks} />
         </>
       )}
     </>
