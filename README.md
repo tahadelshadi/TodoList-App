@@ -1,7 +1,6 @@
 # Visit the app at :
 https://todolist-app-inky-kappa.vercel.app/
-#Preview:
-![1](/todolist-app.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
